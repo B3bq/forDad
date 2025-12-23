@@ -1,0 +1,145 @@
+:root {
+    font-family: Roboto, sans-serif;
+    background-color: #242424;
+    color: #f2f2f2;
+    text-align: center;
+  }
+  
+  body {
+    position: relative;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: none;
+  }
+  
+  #first > p {
+    position: relative;
+  }
+  
+  #first > p::after {
+    display: block;
+    content: "";
+    width: 70%;
+    height: 3px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 165%;
+    left: 15%;
+    transform: translate(-50%, 0%);
+    animation: floatUp 1.8s ease-in-out infinite;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 58%;
+    width: 16px;
+    height: 16px;
+    fill: #f2f2f2;
+    transform: translateY(-50%);
+    animation: floatUp 1.8s ease-in-out infinite;
+  }
+  
+  .left {
+    left: 18%;
+  }
+  
+  .right {
+    right: 18%;
+  }
+  
+  @keyframes floatUp {
+    0%, 100% {
+      transform: translateY(-50%) translateY(0);
+    }
+    50% {
+      transform: translateY(-50%) translateY(-6px);
+    }
+  }
+  #second h2 {
+    margin: 0;
+  }
+  
+  #second p {
+    font-size: smaller;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    background: radial-gradient(circle at center, rgba(255, 0, 76, 0.3) 0%, rgba(255, 255, 200, 0) 70%);
+  }
+  .slide p {
+    margin: 5px 15px;
+  }
+  
+  .slide .last::after {
+    display: block;
+    content: "";
+    width: 55%;
+    height: 3px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 88.5%;
+    left: 22.5%;
+    transform: translate(-50%, 0%);
+    animation: floatUp 1.8s ease-in-out infinite;
+  }
+  
+  .arrow2 {
+    position: absolute;
+    top: 88.5%;
+    width: 16px;
+    height: 16px;
+    fill: #f2f2f2;
+    transform: translateY(-50%);
+    animation: floatUp 1.8s ease-in-out infinite;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .img {
+    position: absolute;
+  }
+  
+  .kamil {
+    scale: 0.4;
+    top: 50%;
+    left: -70%;
+    rotate: 45deg;
+  }
+  
+  .bartek {
+    scale: 0.25;
+    top: 15%;
+    right: -80%;
+    rotate: 20deg;
+  }
+  
+  .kamila {
+    filter: invert(100%);
+    top: 1%;
+    left: -70%;
+    rotate: -35deg;
+    scale: 0.34;
+  }
+  
+  .seba {
+    top: 50%;
+    scale: 0.5;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  
